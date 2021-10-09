@@ -9,4 +9,6 @@ $telefono = $_POST['telefono'];
 $info = "Nombre: ".$nombre. "Telefono: ".$telefono;
 
 mail($destinatario,$asunto,$mensaje, $info); 
+header("Location:gracias.html");
+exit;
 ?>
