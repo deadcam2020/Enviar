@@ -14,7 +14,25 @@ $cuerpo = '
 </body> 
 </html> 
 '; 
+//para el envío en formato HTML 
+$headers = "MIME-Version: 1.0\r\n"; 
+$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+
+//dirección del remitente 
+$headers .= "From: Camilo Contreras <camilocontreras2019@gmail.com>\r\n"; 
+
+//dirección de respuesta, si queremos que sea distinta que la del remitente 
+$headers .= "Reply-To: camilo-contreras@corposucre.edu.co\r\n"; 
+
+//ruta del mensaje desde origen a destino 
+$headers .= "Return-path: camilocontreras2019@gmail.com\r\n"; 
+
+//direcciones que recibián copia 
+$headers .= "Cc: camilo-contreras@corposucre.edu.co\r\n"; 
+
+//direcciones que recibirán copia oculta 
+$headers .= "Bcc: camilocontreras2019@gmail.com\r\n"; 
 
 
-mail($destinatario,$asunto,$cuerpo) 
+mail($destinatario,$asunto,$cuerpo, $headers) 
 ?>
