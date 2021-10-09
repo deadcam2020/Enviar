@@ -1,5 +1,5 @@
 <?php 
-$destinatario = "pepito@desarrolloweb.com"; 
+$destinatario = "camilocontreras2019@gmail.com"; 
 $asunto = "Este mensaje es de prueba"; 
 $cuerpo = ' 
 <html> 
